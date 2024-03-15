@@ -1,0 +1,84 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/***************************************************
+*********************** FONT ***********************
+****************************************************/  
+
+.poiret-one-regular {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.amatic-sc-regular {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .amatic-sc-bold {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+/***************************************************
+********************** FONT END ********************
+****************************************************/   
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('/Medias/coffeeback.jpg');
+    background-position: center;
+    background-size: cover;
+    
+}
+
+#titre {
+    color: rgb(75, 40, 23);
+    text-align: center;
+    font-family: 'Poiret One', sans-serif;
+    letter-spacing: 6px;
+    margin-top: 5vh;
+    color: grey;
+    mix-blend-mode:difference;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 55%;
+    transform: translate(-50%, -50%); 
+    width: 90%; 
+    list-style: none;
+    mix-blend-mode: difference;
+
+}
+
+nav a {
+    text-decoration: none; 
+    margin: 10px; 
+    transition: font-size 0.3s;
+    mix-blend-mode: exclusion;
+    color: white;
+    font-family: "Amatic SC", sans-serif;
+    font-size: 25px;
+}
+
+nav a:hover {
+    font-size: 28PX; 
+}
