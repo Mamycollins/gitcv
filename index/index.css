@@ -1,37 +1,10 @@
-body, html {
-    margin: 0;
-    padding: 0;
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
 }
-
-/***************************************************
-*********************** FONT ***********************
-****************************************************/  
-
-.poiret-one-regular {
-    font-family: "Poiret One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.amatic-sc-regular {
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .amatic-sc-bold {
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-
-/***************************************************
-********************** FONT END ********************
-****************************************************/   
 
 .background {
     position: fixed;
@@ -39,46 +12,87 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    background-image: url('/Medias/coffeeback.jpg');
-    background-position: center;
-    background-size: cover;
-    
+    z-index: -100;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 45%, rgba(0,0,0,1) 45%);
 }
 
-#titre {
-    color: rgb(75, 40, 23);
-    text-align: center;
-    font-family: 'Poiret One', sans-serif;
-    letter-spacing: 6px;
-    margin-top: 5vh;
-    color: grey;
-    mix-blend-mode:difference;
+#moon {
+    justify-content: center;
+    align-items: center;  
+    display: flex;
 }
+#titre {
+    position: relative; /* Assurez-vous que le conteneur du titre soit positionné de manière relative */
+}
+
+#boxing {
+    width: 20%;
+    position: absolute;
+    right: -50px; /* Ajustez cette valeur selon vos besoins */
+    top: 90%; /* Placez-le verticalement au centre du titre */
+    transform: translateY(-50%); /* Centrez verticalement l'élément par rapport au titre */
+}
+
+#titre h1 {
+    top: 10vh;
+    color: #b07200;
+    font-size: 2vw;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    display: inline-block;
+    position: relative;
+    font-family: 'Poiret One', serif;
+    overflow: hidden; /* Cache le soulignement initial */
+}
+
+#titre h1::after {
+    content: ''; /* Ajoute un pseudo-élément pour le soulignement */
+    position: absolute;
+    bottom: -1px; /* Ajustez la position verticale du soulignement selon vos besoins */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Ajustez l'épaisseur du soulignement selon vos besoins */
+    background-color: #b07200; /* Couleur du soulignement */
+    transform: scaleX(0); /* Réduit la largeur du soulignement à zéro */
+    transition: transform 0.3s ease; /* Ajoute une transition pour une animation fluide */
+}
+
+#titre h1:hover::after {
+    transform: scaleX(1); /* Augmente la largeur du soulignement au survol */
+}
+
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: absolute;
-    top: 55%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%); 
-    width: 90%; 
+    width: 80%; 
     list-style: none;
-    mix-blend-mode: difference;
-
 }
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav li:nth-child(3) {
+    margin: -50px -200px 0px -200px
+}
+
 
 nav a {
     text-decoration: none; 
-    margin: 10px; 
     transition: font-size 0.3s;
-    mix-blend-mode: exclusion;
+    mix-blend-mode: difference;
     color: white;
     font-family: "Amatic SC", sans-serif;
     font-size: 25px;
 }
 
 nav a:hover {
-    font-size: 28PX; 
+    font-size: 28px; 
 }

@@ -1,25 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon CV</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Jacquarda+Bastarda+9&family=Poiret+One&family=Rajdhani:wght@300;400;500;600;700&family=Silkscreen:wght@700&display=swap" rel="stylesheet">
-    
-    <link href="index.css" rel="stylesheet">
 </head>
 <body>
     <div class="background"></div>
-    <h1 id="titre">igdoiselet.cv</h1>
-    
+    <div id="titre">
+    <h1>igdoiselet.cv</h1>
+    <img src="/Medias/boxing.gif" id="boxing"> <!-- Ajout de l'image boxing.gif -->
+    </div>
     <div class="menu">
         <nav>
-            <li><a href="">Experiences</a></li>
-            <li><a href="">Studies</a></li>
-            <li><a href=""><!--IGD--></a></li>
-            <li><a href="">About me</a></li>
-            <li><a href="">Contact</a></li> 
+            <ul>
+                <li><a href="">Experiences</a></li>
+                <li><a href="">Studies</a></li>
+                <li id="moon"><img src="/Medias/full-moon.png" style="z-index: 1; width: 40%;"></li>
+                <li><a href="">About me</a></li>
+                <li><a href="">Contact</a></li> 
+            </ul>
+        </nav>
     </div>
+
+    <script>
+        const titre = document.getElementById('titre');
+        const boxingImage = document.getElementById('boxing');
+
+        titre.addEventListener('mouseenter', function() {
+            boxingImage.style.display = 'block'; // Afficher l'image du boxing.gif au survol du titre
+        });
+
+        titre.addEventListener('mouseleave', function() {
+            boxingImage.style.display = 'none'; // Masquer l'image du boxing.gif lorsque la souris quitte le titre
+        });
+    </script>
 </body>
 </html>
